@@ -56,7 +56,11 @@
         <div class="content-nosidebar">
             <div class="content">
                 <a href="/" class="page-logo">
+                    <?php if (get_field('page_logo')): ?>
+                    <img src="<?php the_field('page_logo'); ?>" alt="NY Hair">
+                    <?php else: ?>
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/page-logo.png" alt="NY Hair">
+                    <?php endif; ?>
                 </a>
                 <div class="hidden-sm hidden-s">
                     <?php
