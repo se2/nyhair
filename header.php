@@ -18,7 +18,7 @@
 
 <body <?php body_class(); ?>>
     <?php if (is_front_page()) : ?>
-    <div class="header">
+    <div class="header header-home">
         <div class="dropdown-menu">
             <div class="content-nosidebar">
                 <div class="content">
@@ -53,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="content-nosidebar">
+        <div class="content-nosidebar upper-header">
             <div class="content">
                 <a href="/" class="page-logo">
                     <?php if (get_field('page_logo')): ?>

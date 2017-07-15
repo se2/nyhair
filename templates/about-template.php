@@ -10,7 +10,7 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div class="page about">
+<div class="page page-body about">
 
 	<?php get_template_part( 'modules/page', 'banner' ); ?>
 
