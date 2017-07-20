@@ -25,7 +25,7 @@
 	<?php if (count($gallery) > 0): ?>
 	<div class="gallery">
 		<?php foreach ($gallery as $key => $photo): ?>
-		<div class="bg-cover gallery-item grid-col s-12 sm-13 m-14 l-14 lg-14" style="background-image: url('<?php echo $photo['url']; ?>');"></div>
+		<div class="bg-cover gallery-item grid-col s-12 sm-13 m-14 l-14 lg-14" style="background-image: url('<?php echo $photo['sizes']['gallery-size']; ?>');"></div>
 		<?php endforeach; ?>
 	</div>
 	<?php endif; ?>

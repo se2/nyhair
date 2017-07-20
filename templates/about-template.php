@@ -19,12 +19,16 @@
 			<div class="content">
 				<?php the_content(); ?>
 				<p></p>
-				<?php $people = get_field('person'); ?>
-				<?php if (count($people) > 0): ?>
+				<?php $groups = get_field('people_group'); ?>
+				<?php if (count($groups) > 0): ?>
+				<?php foreach ($groups as $key => $group) : ?>
+				<div class="people-department">
+					<?php echo $group['department_title']; ?>
+				</div>
 				<div class="about-people">
-					<?php foreach ($people as $key => $person) : ?>
+					<?php foreach ($group['person'] as $key => $person) : ?>
 					<div class="about-person grid-col s-11 sm-13 m-13 l-13 lg-13">
-						<div class="about-person--avatar bg-cover" style="background-image: url('<?php echo $person['photo']; ?>');"></div>
+						<div class="about-person--avatar bg-cover" style="background-image: url('<?php echo $person['photo']['sizes']['people-size']; ?>');"></div>
 						<div class="about-person--info">
 							<p>
 								<span class="uppercase blue"><?php echo $person['name']; ?></span> <br>
@@ -34,6 +38,7 @@
 					</div>
 					<?php endforeach; ?>
 				</div>
+				<?php endforeach; ?>
 				<?php endif; ?>
 			</div>
 		</div>

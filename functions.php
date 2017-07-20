@@ -17,6 +17,9 @@ function theme_styles() {
 	wp_enqueue_style( 'neutraface-display', get_stylesheet_directory_uri() . '/assets/css/font.css', array(), CHILD_THEME_VERSION);
 	wp_enqueue_style( 'grid', get_stylesheet_directory_uri() . '/assets/css/grid.css', array(), CHILD_THEME_VERSION);
 	wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/style.css', array(), CHILD_THEME_VERSION);
+
+	/* Custom script */
+	wp_enqueue_script('my-custom-script', get_stylesheet_directory_uri() .'/assets/js/main.js', array('jquery'), null, true);
 }
 
 //* Add HTML5 markup structure
@@ -51,8 +54,10 @@ add_action( 'genesis_footer', 'sp_after_post_widget' );
 //* Remove the Credit footer
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 
-/* Custom script */
-wp_enqueue_script('my-custom-script', get_stylesheet_directory_uri() .'/assets/js/main.js', array('jquery'), null, true);
+// * Custom Image Size
+// add_image_size( 'gallery-size', 475, 475, array( 'left', 'top' ) );
+add_image_size( 'gallery-size', 475, 475, array( 'center', 'center' ) );
+add_image_size( 'people-size', 279, 356 );
 
 //* Go typekit! - add: data-cfasync="false"  for cloudflare - load early forget fout - change CHANGEME
 /*
