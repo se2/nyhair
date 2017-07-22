@@ -18,6 +18,13 @@ function theme_styles() {
 	wp_enqueue_style( 'grid', get_stylesheet_directory_uri() . '/assets/css/grid.css', array(), CHILD_THEME_VERSION);
 	wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/style.css', array(), CHILD_THEME_VERSION);
 
+	/* PhotoSwipe */
+	wp_enqueue_style( 'photoswipe-main', get_stylesheet_directory_uri() . '/assets/js/photoswipe/photoswipe.css', array(), CHILD_THEME_VERSION);
+	wp_enqueue_style( 'photoswipe-skin', get_stylesheet_directory_uri() . '/assets/js/photoswipe/default-skin/default-skin.css', array(), CHILD_THEME_VERSION);
+
+	wp_enqueue_script('photoswipe-script', get_stylesheet_directory_uri() .'/assets/js/photoswipe/photoswipe.min.js', array(), null, true);
+	wp_enqueue_script('photoswipe-ui-script', get_stylesheet_directory_uri() .'/assets/js/photoswipe/photoswipe-ui-default.min.js', array(), null, true);
+
 	/* Custom script */
 	wp_enqueue_script('my-custom-script', get_stylesheet_directory_uri() .'/assets/js/main.js', array('jquery'), null, true);
 }

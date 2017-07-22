@@ -28,7 +28,7 @@
 				<div class="about-people">
 					<?php foreach ($group['person'] as $key => $person) : ?>
 					<div class="about-person grid-col s-11 sm-13 m-13 l-13 lg-13">
-						<div class="about-person--avatar bg-cover" style="background-image: url('<?php echo $person['photo']['sizes']['people-size']; ?>');"></div>
+						<div class="about-person--avatar bg-cover" style="background-image: url('<?php echo $person['photo']['url']; ?>');"></div>
 						<div class="about-person--info">
 							<p>
 								<span class="uppercase blue"><?php echo $person['name']; ?></span> <br>
