@@ -1,11 +1,11 @@
 {
-    "key": "group_5963e25665091",
-    "title": "Page Banner",
+    "key": "group_5979201c84516",
+    "title": "Page Footer",
     "fields": [
         {
-            "key": "field_5963e2f4ff88a",
-            "label": "Display Page Banner",
-            "name": "display_page_banner",
+            "key": "field_5979201c866c2",
+            "label": "Display Page Footer",
+            "name": "display_page_footer",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -22,16 +22,16 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_5963e25d4cab6",
-            "label": "Page Banner Background",
-            "name": "page_banner_background",
+            "key": "field_5979201c8674c",
+            "label": "Page Footer Background",
+            "name": "page_footer_background",
             "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5963e2f4ff88a",
+                        "field": "field_5979201c866c2",
                         "operator": "==",
                         "value": "1"
                     }
@@ -91,13 +91,13 @@
             }
         ]
     ],
-    "menu_order": 1,
-    "position": "acf_after_title",
+    "menu_order": 2,
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1501110404
+    "modified": 1501110465
 }

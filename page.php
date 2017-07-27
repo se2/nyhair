@@ -25,6 +25,8 @@
 	</div>
 	<?php endforeach; ?>
 
+	<?php get_template_part( 'modules/page', 'footer' ); ?>
+
 </div>
 
 <?php endwhile; else : ?>
