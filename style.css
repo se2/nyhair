@@ -127,7 +127,7 @@ body {
 	background-color: white;
 	color: #333;
 	font-family: "NeutrafaceDisplay", Lato, sans-serif;
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: 500;
 	line-height: 1.625;
 	margin: 0;
@@ -151,6 +151,7 @@ a {
 	text-decoration: none;
 	font-weight: 500;
 }
+
 @media screen and (min-width: 1024px) {
 	a:hover {
 		color: #333;
@@ -158,11 +159,17 @@ a {
 }
 
 p {
-	font-size: 20px;
+	font-size: 22px;
 	margin: 0 0 20px;
 	padding: 0;
 	letter-spacing: 0.03em;
 	line-height: 23px;
+}
+
+@media screen and (max-width: 480px) {
+	p {
+		margin: 0 0 25px;
+	}
 }
 
 ol,
@@ -222,6 +229,17 @@ h6 {
 	margin: 0 0 20px;
 }
 
+@media screen and (max-width: 480px) {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0 0 25px;
+	}
+}
+
 h1 {
 	font-size: 24px;
 	color: #8ca349;
@@ -230,21 +248,21 @@ h1 {
 }
 
 h2 {
-	font-size: 20px;
+	font-size: 22px;
 	color: #8ca349;
 	font-weight: bold;
 	letter-spacing: 0.03em;
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 22px;
 	letter-spacing: 0.03em;
 	color: #5ca49a;
 	font-weight: 500;
 }
 
 h4 {
-	font-size: 20px;
+	font-size: 22px;
 }
 
 h5 {
@@ -386,7 +404,7 @@ table {
 	margin-bottom: 40px;
 	width: 100%;
 	letter-spacing: 0.03em;
-	line-height: 20px;
+	line-height: 23px;
 }
 
 tbody {
@@ -655,7 +673,7 @@ table.price-list .service-name {
 --------------------------------------------- */
 
 .archive-title {
-	font-size: 20px;
+	font-size: 22px;
 }
 
 .entry-title {
@@ -790,7 +808,7 @@ img.alignright,
 }
 
 .featured-content .entry-title {
-	font-size: 20px;
+	font-size: 22px;
 }
 
 
@@ -1723,7 +1741,7 @@ li.comment {
 }
 
 .about-person--info p {
-	font-size: 20px;
+	font-size: 22px;
 	letter-spacing: 0.15em;
 	line-height: 20px;
 	margin-bottom: 0;
@@ -1774,7 +1792,7 @@ li.comment {
 	width: 100%;
 	text-align: center;
 	margin: 0;
-	font-size: 20px;
+	font-size: 22px;
 	line-height: 2;
 }
 
@@ -1935,7 +1953,7 @@ li.comment {
 
 	.content-nosidebar {
 		width: 100%;
-		padding: 0 10px;
+		padding: 0 25px;
 	}
 
 	.content-nosidebar .content {
