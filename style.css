@@ -1748,8 +1748,107 @@ li.comment {
 }
 
 .about-person--info span {
+	transition: color 300ms;
+}
+
+.about-person--info span.uppercase:hover {
+	color: #8ca349;
+}
+
+.about-person--info span {
 	font-size: 17px;
 	letter-spacing: 0.03em;
+}
+
+/* About page popup */
+
+.about-person.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.75);
+	z-index: 2;
+	padding: 20px 0;
+	display: none;
+}
+
+.about-person.popup .about-person--left {
+	width: 33.333333%;
+  float: left;
+}
+
+.about-person.popup .about-person--right {
+	width: 66.666667%;
+	padding-left: 25px;
+	box-sizing: border-box;
+	float: left;
+}
+
+.about-person.popup .about-person--bio {
+	width: 100%;
+	float: left;
+}
+
+.popup.popup-active {
+	display: flex;
+	align-items: center;
+}
+
+.popup-close {
+	position: absolute;
+	color: #5ca49a;
+	right: 25px;
+	top: 0;
+	font-size: 100px;
+	display: inline-block;
+	line-height: 1;
+}
+
+.popup-close:hover {
+	color: #5ca49a;
+}
+
+.popup-wrapper {
+	width: 75%;
+	margin: 0 auto;
+	overflow: hidden;
+	background: white;
+  padding: 40px;
+  border-radius: 10px;
+	overflow-y: scroll;
+	height: auto;
+	max-height: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+	.popup-wrapper {
+		width: 96%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.popup-wrapper {
+		padding: 20px;
+	}
+
+	.about-person.popup .about-person--left {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.about-person.popup .about-person--right {
+		width: 100%;
+		padding-left: 0;
+	}
+
+	.popup-close {
+		line-height: 1;
+		right: 30px;
+	}
 }
 
 /* Dropdown menu */
@@ -1794,6 +1893,12 @@ li.comment {
 	margin: 0;
 	font-size: 22px;
 	line-height: 2;
+}
+
+@media only screen and (max-width: 375px) {
+	.dropdown-menu .main-menu li {
+		line-height: 1.5;
+	}
 }
 
 .dropdown-menu .main-menu a {
@@ -1945,6 +2050,47 @@ li.comment {
 .gallery-link .bg-cover {
 	position: absolute;
 }
+
+/* Book now button */
+
+.btn {
+	display: inline-block;
+	padding: 13px 17px;
+	background-color: #5ca499;
+	color: white;
+	text-transform: uppercase;
+	line-height: 1;
+	transition: background-color 300ms;
+}
+
+@media only screen and (min-width: 1024px) {
+	.btn:hover {
+		color: white;
+		background-color: #2e524d;
+	}
+}
+
+.btn-book {
+	position: absolute;
+	right: 15px;
+	bottom: 70px;
+}
+
+.home .btn-book {
+	position: relative;
+	right: auto;
+	bottom: auto;
+}
+
+@media only screen and (max-width: 1023px) {
+	.btn-book {
+		position: relative;
+		right: auto;
+		bottom: auto;
+	}
+}
+
+/* Book now button */
 
 /* Responsive */
 

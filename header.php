@@ -17,6 +17,23 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <?php
+        function book_now() {
+          // open the <ul>, set 'menu_class' and 'menu_id' values
+          $wrap  = '<ul id="%1$s" class="%2$s">';
+
+          // get nav items as configured in /wp-admin/
+          $wrap .= '%3$s';
+
+          // the static link
+          $wrap .= '<li class="book-now-item"><a href="http://198.0.189.77/onlinebooking2/#/" class="btn btn-book" target="_blank">Book now</a></li>';
+
+          // close the <ul>
+          $wrap .= '</ul>';
+          // return the result
+          return $wrap;
+        }
+    ?>
     <?php if (is_front_page()) : ?>
     <div class="header header-home">
         <div class="dropdown-menu">
@@ -25,6 +42,7 @@
                     <?php
                         wp_nav_menu(array(
                             'menu' => 'Main Menu',
+                            'items_wrap' => book_now(),
                             'container_class' => 'main-menu'
                         ));
                     ?>
@@ -47,6 +65,7 @@
                     <?php
                         wp_nav_menu(array(
                             'menu' => 'Main Menu',
+                            'items_wrap' => book_now(),
                             'container_class' => 'main-menu'
                         ));
                     ?>
@@ -69,6 +88,7 @@
                             'container_class' => 'main-menu'
                         ));
                     ?>
+                    <a href="http://198.0.189.77/onlinebooking2/#/" class="btn btn-book" target="_blank">Book now</a>
                 </div>
                 <div id="nav-icon" class="nav-icon-page visible-s visible-sm">
                   <span></span>

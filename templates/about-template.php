@@ -27,13 +27,37 @@
 				</div>
 				<div class="about-people">
 					<?php foreach ($group['person'] as $key => $person) : ?>
+					<?php $personID = sanitize_title($person['name']) . '-' . $key ; ?>
 					<div class="about-person grid-col s-11 sm-13 m-13 l-13 lg-13">
-						<div class="about-person--avatar bg-cover" style="background-image: url('<?php echo $person['photo']['url']; ?>');"></div>
-						<div class="about-person--info">
-							<p>
-								<span class="uppercase blue"><?php echo $person['name']; ?></span> <br>
-								<?php echo $person['position']; ?>
-							</p>
+						<a href="#" data-person="<?php echo $personID; ?>" class="js-popup">
+							<div class="about-person--avatar bg-cover" style="background-image: url('<?php echo $person['photo']['url']; ?>');"></div>
+							<div class="about-person--info">
+								<p>
+										<span class="uppercase blue"><?php echo $person['name']; ?></span>
+									<br>
+									<?php echo $person['position']; ?>
+								</p>
+							</div>
+						</a>
+					</div>
+					<!-- Popup -->
+					<div class="about-person popup grid-col s-11 sm-13 m-13 l-13 lg-13" id="<?php echo $personID; ?>">
+						<a href="#" class="js-close popup-close">&times;</a>
+						<div class="popup-wrapper">
+							<div class="about-person--left">
+								<div class="about-person--avatar bg-cover" style="background-image: url('<?php echo $person['photo']['url']; ?>');"></div>
+								<div class="about-person--info">
+									<p>
+										<span class="uppercase blue"><?php echo $person['name']; ?></span> <br>
+										<?php echo $person['position']; ?>
+									</p>
+								</div>
+							</div>
+							<div class="about-person--right">
+								<div class="about-person--bio">
+									<?php echo $person['bio']; ?>
+								</div>
+							</div>
 						</div>
 					</div>
 					<?php endforeach; ?>
